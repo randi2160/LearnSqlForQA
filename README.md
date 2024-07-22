@@ -76,9 +76,51 @@ order by 3 desc
 |DEPT|EMPS|SALARIES|
 |SALES|2|1200000.00|
 |info Tech|4|772000.00|
-
-
 etc
+
+#  SELECT MAX FUNCTION
+
+SEELECT  * FROM EMPLOYEES
+SELECT EM_SalaryFrom Employees ORDER BY 1
+
+# what if youw ant to find out the highest salary in this table USE THE AGREEGATE FUNCTION
+SELECT MAX(EM_Salary) AS [MAX] FROM Employees
+
+# YOU CAN CALL it something that not a keyword without square bracket
+SELECT MAX(EM_Salary) AS Mx FROM Employees
+
+# MIN FUNCTION
+SELECT EM_SALARY FROM EMPLOYEES ORDER BY 1
+# IF YOU HAVE THOUSSAND OF RECORD AND YOU WANT TO SEE THE MIN SALARY YOU CAN USE THE MIN KEEY WORD
+
+SELECT MIN(EM_Salary) from employees order by 1
+
+# select MIN MAX
+SELECT ^ FROM EMPLOYEES 
+SELECT MIN(EM_Salary), MAX(EM_SALARY) FROM EMPLOYEES order by 1
+
+# IF WE WERE TO SELECT ALL SALARY AND ORDER BY, WHAT IF WE WANT TO FIND OUT THE AVERAGE SALARY
+SELECT AVG(EM_salary) from EMployees Order by 1
+SELECT AVG(EM_salary) [AVG] from EMployees Order by 1
+
+# THREE AGREGARATE FUNCTION , MIN MAX AND AVERAGE
+SELECT    EM_Salary from Employee
+
+SELECT    MIN (EM_Salary) [MIN],
+          AVG(Em_salary)[AVG],
+          MAX(Em_salary)[MAX]
+
+FROM      EMPLOYEES
+
+SAMPLE RESULTS:
+
+|MIN  |AVG       |MAX       |
+|56000|251511.111|8500000.00|
+
+
+
+
+
 
 
 
