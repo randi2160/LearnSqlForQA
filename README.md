@@ -50,4 +50,36 @@ SELECT DP_Description, ISNULL(DP_Order,99999)
 FROM Departments ORDER BY 2
 
 
+# SUM FUNCTION!
+
+# TRY TO FIGURE OUT THE SUM OF ALL THE SALARY
+select SUM(EM_SALARY) Salaries from Employees
+
+# how much we are pay per department
+SELECT SUM(EM_Salary) Salaries from Employees GROUP BY DP_KEY
+
+# so now we want to see what department
+SELECT DP_KEY, SUM(EM_SALARY) Salaries from Employees GROUBY BY DP_KEY
+
+# SO HOW MANY PEOPLE ARE IN THAT DEPARTMENT 
+DP_DISPLAY
+
+
+SELECT DP_DESCRIPTION Dept, COUNT(EM_KEY) Emps
+SUM(EM_SALARY) salaries
+from employees EM
+INNER JOIN
+Departments DP on DP.DP_KEY = EM.DP_KEY
+GROUP BY DP.DP_KEY, DP_Description 
+order by 3 desc
+
+|DEPT|EMPS|SALARIES|
+|SALES|2|1200000.00|
+|info Tech|4|772000.00|
+
+
+etc
+
+
+
 
